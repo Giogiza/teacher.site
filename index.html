@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт учителя русского языка и литературы - Анастасия Васильевна</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-info">
+                <img src="images/logo.png" alt="Логотип" class="logo">
+                <div>
+                    <h1>Анастасия Васильевна</h1>
+                    <p>Учитель русского языка и литературы</p>
+                    <p>МБОУ "СОШ №24", г. Абакан | Кабинет №105 (1 этаж)</p>
+                    <p><small>Обновлено: <span id="current-date"></span></small></p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="about.html">Об учителе</a></li>
+                    <li><a href="literature.html">Литература</a></li>
+                    <li><a href="language.html">Русский язык</a></li>
+                    <li><a href="for_parents.html">Родителям</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="welcome">
+            <h2>Добро пожаловать в мир слов и образов!</h2>
+            <p>Этот сайт — ваш надежный проводник в мире русского языка и литературы. Здесь собраны материалы для успешной учебы, полезные ресурсы и актуальная информация для учеников и их родителей.</p>
+            <img src="images/teacher_photo.jpg" alt="Анастасия Васильевна" class="main-photo">
+            <p style="margin-top: 20px; font-style: italic; color: var(--accent);">Величайшее богатство народа — его язык! (М.А. Шолохов)</p>
+        </section>
+
+        <section class="quick-links">
+            <h2>Быстрые ссылки</h2>
+            <div class="links-grid">
+                <a href="for_parents.html" class="link-card">
+                    <h3>📋 Родителям</h3>
+                    <p>Важная информация о собраниях, успеваемости и требованиях</p>
+                </a>
+                <a href="documents/spisok_literatury.docx" class="link-card disabled">
+                    <h3>📚 Список литературы на лето</h3>
+                    <p>Будет доступен для скачивания в конце учебного года</p>
+                </a>
+                <a href="literature.html" class="link-card">
+                    <h3>📖 Литература</h3>
+                    <p>Материалы для изучения, анализы произведений, полезные ссылки</p>
+                </a>
+                <a href="contacts.html" class="link-card">
+                    <h3>📞 Связь с учителем</h3>
+                    <p>Контакты для вопросов и консультаций</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="welcome" style="margin-top: 40px; background: linear-gradient(135deg, var(--light) 0%, #ffffff 100%);">
+            <h3 style="color: var(--secondary);">Важная информация</h3>
+            <p>Сайт постоянно обновляется. Актуальные новости и объявления можно найти в школьном электронном дневнике или уточнить лично у Анастасии Васильевны.</p>
+            <p><strong>Дата последнего обновления сайта: <span id="update-date"></span></strong></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Анастасия Васильевна, учитель русского языка и литературы.</p>
+            <p>МБОУ "СОШ №24", г. Абакан, каб. 105.</p>
+            <p>Сайт создан в образовательных целях одним из учеников Анастасии Васильевны</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        function formatDate(date) {
+            const day = date.getDate().toString().padStart(2, '0');
+            const month = (date.getMonth() + 1).toString().padStart(2, '0');
+            const year = date.getFullYear();
+            return `${day}.${month}.${year}`;
+        }
+        
+        const currentDate = new Date();
+        document.getElementById('current-date').textContent = formatDate(currentDate);
+        document.getElementById('update-date').textContent = formatDate(currentDate);
+    </script>
+</body>
+</html>
